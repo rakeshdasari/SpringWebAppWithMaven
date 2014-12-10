@@ -16,8 +16,12 @@ public class HelloService {
 	private SessionFactory sessionFactory;
 	
 	public Employee getEmployee(){
-		Employee emp = (Employee)sessionFactory.getCurrentSession().get(Employee.class, 1);
+		Employee emp = (Employee)sessionFactory.getCurrentSession().get(Employee.class, 2);
 		return emp;
+	}
+	
+	public java.io.Serializable setEmployee(Employee emp){
+		return sessionFactory.getCurrentSession().save(emp);
 	}
 
 	
