@@ -39,6 +39,7 @@ public class HelloController {
 	{
 		System.out.println("in authenticate get method controller");
 		//model.addAttribute("uauth",new UserAuthentication());
+		System.out.println("For Testing");
 		ModelAndView mav = new ModelAndView();
 		Employee emp = helloService.getEmployee();
 		model.addAttribute("empdetails", emp);
